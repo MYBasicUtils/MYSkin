@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - MYSkin (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - MYSkin (from `../`)
+
+SPEC REPOS:
+  https://cdn.cocoapods.org/:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  MYSkin:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  MYSkin: 090998266b8251b95db331d24b214770db28c7d2
+
+PODFILE CHECKSUM: eb7a9600b46a7e5eb2c9de025ef5e987778c7cf7
+
+COCOAPODS: 1.8.4
