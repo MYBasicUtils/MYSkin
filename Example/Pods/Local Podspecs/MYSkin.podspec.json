@@ -1,15 +1,15 @@
 {
   "name": "MYSkin",
   "version": "0.1.0",
-  "summary": "A short description of MYSkin.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "皮肤主题管理.",
+  "description": "一个方便的皮肤主题管理控件。可以解决动态皮肤管理。",
   "homepage": "https://github.com/WenMingYan/MYSkin",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "WenMingYan": "wenmy@tuya.com~"
+    "WenMingYan": "wenmingyan1990@163.com"
   },
   "source": {
     "git": "https://github.com/WenMingYan/MYSkin.git",
@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "MYSkin/Classes/**/*"
+  "source_files": "MYSkin/Classes/**/*",
+  "dependencies": {
+    "YYModel": [
+
+    ]
+  }
 }

@@ -4,6 +4,7 @@ platform :ios, '8.0'
 
 target 'MYSkin_Example' do
   pod 'MYSkin', :path => '../'
+  pod 'Masonry'
 
   target 'MYSkin_Tests' do
     inherit! :search_paths

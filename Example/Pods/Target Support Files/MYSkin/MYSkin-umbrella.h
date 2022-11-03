@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "MYSkin.h"
+#import "MYSkinDecodeEngineProtocol.h"
+#import "MYSkinJsonDecodeEngine.h"
+#import "MYSkinThemeModel.h"
 
 FOUNDATION_EXPORT double MYSkinVersionNumber;
 FOUNDATION_EXPORT const unsigned char MYSkinVersionString[];
