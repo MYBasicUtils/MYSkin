@@ -9,10 +9,13 @@
 #import "MYSkinDecodeEngineProtocol.h"
 #import "MYSkinJsonDecodeEngine.h"
 
+NSString *const kMYSkinColorThemeChange = @"kMYSkinColorThemeChange";
+
 @interface MYSkin ()
 
 @property (nonatomic, strong) MYSkinThemeModel *currentThemeModel;/**<  当前的主题 */
-@property (nonatomic, strong) MYSkinThemeModel *darkThemeModel;/**<  暗黑主题 */
+@property (nonatomic, strong) MYSkinThemeModel *themeModel;/**<  选中的主题 */
+@property (nonatomic, strong) MYSkinThemeModel *darkThemeModel;/**<  暗黑的主题 */
 
 @property (nonatomic, strong) MYSkinJsonDecodeEngine *defaultDecodeEngine;
 @property (nonatomic, strong) id<MYSkinDecodeEngineProtocol> decodeEngine;/**<  解析器 */
@@ -66,14 +69,40 @@
     if (!themeModel) {
         return;
     }
-    if (![themeModel isEqual:self.currentThemeModel]) {
-        _currentThemeModel = themeModel;
+    if (![themeModel isEqual:self.themeModel]) {
+        _themeModel = themeModel;
+        self.currentThemeModel = self.themeModel;
+        // 发送通知
+        [NSNotificationCenter.defaultCenter postNotificationName:kMYSkinColorThemeChange object:nil];
+    }
+}
+
+- (void)configDarkThemeModel:(MYSkinThemeModel *)themeModel {
+    if (!themeModel) {
+        return;
+    }
+    if (![themeModel isEqual:self.darkThemeModel]) {
+        _darkThemeModel = themeModel;
+        if (self.isDarkTheme) {
+            // 切换为暗黑主题
+            self.currentThemeModel = self.darkThemeModel;
+            // 发送通知
+            [NSNotificationCenter.defaultCenter postNotificationName:kMYSkinColorThemeChange object:nil];
+        }
     }
 }
 
 #pragma mark - private methods
 #pragma mark - getters & setters & init members
 
+- (void)setIsDarkTheme:(BOOL)isDarkTheme {
+    _isDarkTheme = isDarkTheme;
+    if (isDarkTheme) {
+        self.currentThemeModel = self.darkThemeModel;
+    } else {
+        self.currentThemeModel = self.themeModel;
+    }
+}
 
 
 @end

@@ -9,12 +9,15 @@
 #import "MYSkinDecodeEngineProtocol.h"
 
 
+FOUNDATION_EXPORT NSString * _Nonnull const kMYSkinColorThemeChange;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MYSkin : NSObject
 
 @property (nonatomic, strong, readonly) MYSkinThemeModel *currentThemeModel;/**<  当前的主题 */
 @property (nonatomic, strong, readonly) MYSkinThemeModel *darkThemeModel;/**<  暗黑主题 */
+@property (nonatomic, assign) BOOL isDarkTheme;/**<  现在是否是暗黑主题 */
 
 + (instancetype)sharedInstance;
 

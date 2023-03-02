@@ -7,12 +7,16 @@
 //
 
 #import "MYAppDelegate.h"
-
+#import "MYViewController.h"
+#import <MYSkin/MYSkin.h>
 @implementation MYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [MYSkin.sharedInstance loadSkinWithFileName:@"theme.json"];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:MYViewController.new];
+    self.window.rootViewController = navi;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

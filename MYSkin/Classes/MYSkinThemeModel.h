@@ -9,13 +9,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    MYSkinFontModelWeightNormal = 0,
+    MYSkinFontModelWeightSemibold = 1,
+    MYSkinFontModelWeightBold = 2,
+} MYSkinFontModelWeight;
+
 @interface MYSkinFontModel : NSObject
 
-@property (nonatomic, assign) <#type#> <#name#>;/**<  <#something#> */
+@property (nonatomic, strong, readonly) NSString *size;
+@property (nonatomic, strong, readonly) NSString *height;
+@property (nonatomic, strong, readonly) NSString *paragraph;
+@property (nonatomic, assign, readonly) MYSkinFontModelWeight weight;
 
 @end
 
-@interface MYSkinThemeModel : NSObject
+@interface MYSkinThemeConfig : NSObject
 
 #pragma mark - 有色颜色配置
 
@@ -63,11 +72,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 字体
 
-@property (nonatomic, strong, readonly) UIFont *themeFont;/**<  当前字体 */
+@property (nonatomic, strong, readonly) UIFont *themeFont;/**<  当前字体，json中为字体名称。若json中为空或者没有该字段，则使用苹果默认字体 */
 
-@property (nonatomic, assign, readonly) cgf <#name#>;/**<  <#something#> */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f1;/**<  字体，超大，重要数据 */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f2;/**<  字体，超大，常规数据 */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f3;/**<  字体，导航栏标题，一级标题 */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f4;/**<  字体，重要信息模块标题，大按钮文字 */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f5;/**<  字体，列表标题，主要正文内容 */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f6;/**<  字体，次要信息，若层级信息，次级正文内容 */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f7;/**<  字体，弱提示，标签、角标文字 */
+@property (nonatomic, assign, readonly) MYSkinFontModel *f8;/**<  字体，次弱提示，标签、角标文字 */
 
 
+@end
+
+@interface MYSkinThemeModel : NSObject
+
+@property (nonatomic, strong) NSString *name;/**<  主题名称 */
+@property (nonatomic, strong) NSString *themeStyle;/**<  主题样式 */
+@property (nonatomic, strong) MYSkinThemeConfig *config;/**<  主题配置 */
 
 @end
 
