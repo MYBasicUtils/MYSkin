@@ -40,6 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 #define kThemeColor [UIColor blueColor]
 #define kWhiteColor [UIColor whiteColor]
+#define kLightBackgroundColor [UIColor whiteColor]
+
 #define kMargin 16
 
 NS_ASSUME_NONNULL_END
