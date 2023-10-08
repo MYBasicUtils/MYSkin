@@ -38,5 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)configDarkThemeModel:(MYSkinThemeModel *)themeModel;
 
 @end
+#define kThemeColor [UIColor blueColor]
+#define kWhiteColor [UIColor whiteColor]
+#define kMargin 16
 
 NS_ASSUME_NONNULL_END
