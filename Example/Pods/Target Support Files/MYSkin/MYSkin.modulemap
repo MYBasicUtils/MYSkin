@@ -1,0 +1,6 @@
+framework module MYSkin {
+  umbrella header "MYSkin-umbrella.h"
+
+  export *
+  module * { export * }
+}

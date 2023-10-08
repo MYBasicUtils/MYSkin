@@ -1,0 +1,89 @@
+{
+    "themes": [
+        {
+            "name": "默认主题",
+            "themeStyle": "normalTheme",
+            "config": {
+                "TC1": "#536DFE",
+                "TC2": "#FF5722",
+                "TC3": "#8BC34A",
+                "TC4": "#03A9F4",
+                "TC5": "#F44336",
+                "BG1": "#FAFAFA",
+                "BG2": "#FAFAFA",
+                "BG3": "#F5F5F5",
+                "BG4": "#FAFAFA",
+                "BG5": "#FAFAFA",
+                "BG6": "#FAFAFA",
+                "A1": "0.9",
+                "A2": "0.7",
+                "A3": "0.5",
+                "A4": "0.3",
+                "A5": "0.1",
+                "A6": "0.2",
+                "A7": "0.4",
+                "A8": "0.6",
+                "A9": "0.8",
+                "CA1": "32",
+                "CA2": "24",
+                "CA3": "16",
+                "CB1": "8",
+                "CB2": "6",
+                "CB3": "4",
+                "CC1": "16",
+                "CC2": "12",
+                "CC3": "8",
+                "CC4": "4",
+                "themeFont": "",
+                "f1": {
+                    "size": "24",
+                    "height": "36",
+                    "paragraph": "48",
+                    "weight": 1
+                },
+                "f2": {
+                    "size": "20",
+                    "height": "30",
+                    "paragraph": "40",
+                    "weight": 1
+                },
+                "f3": {
+                    "size": "18",
+                    "height": "27",
+                    "paragraph": "36",
+                    "weight": 1
+                },
+                "f4": {
+                    "size": "16",
+                    "height": "24",
+                    "paragraph": "32",
+                    "weight": 1
+                },
+                "f5": {
+                    "size": "14",
+                    "height": "21",
+                    "paragraph": "28",
+                    "weight": 0
+                },
+                "f6": {
+                    "size": "13",
+                    "height": "20",
+                    "paragraph": "26",
+                    "weight": 0
+                },
+                "f7": {
+                    "size": "12",
+                    "height": "18",
+                    "paragraph": "24",
+                    "weight": 0
+                },
+                "f8": {
+                    "size": "10",
+                    "height": "15",
+                    "paragraph": "20",
+                    "weight": 0
+                }
+            }
+        }
+    ]
+}
