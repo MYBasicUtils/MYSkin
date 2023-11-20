@@ -38,10 +38,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)configDarkThemeModel:(MYSkinThemeModel *)themeModel;
 
 @end
+
+//TODO: wmy 主题色配置
+#define kBlackColor [UIColor blackColor]
 #define kThemeColor [UIColor blueColor]
 #define kWhiteColor [UIColor whiteColor]
 #define kLightBackgroundColor [UIColor whiteColor]
 
 #define kMargin 16
+#define kSpace 4
+
+#define kIconWidth 48
 
 NS_ASSUME_NONNULL_END
