@@ -40,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 //TODO: wmy 主题色配置
+#define kPageBackgroundColor [UIColor grayColor]
 #define kBlackColor [UIColor blackColor]
 #define kThemeColor [UIColor blueColor]
 #define kWhiteColor [UIColor whiteColor]
@@ -49,5 +50,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define kSpace 4
 
 #define kIconWidth 48
+#define kSecondIconWidth 36
 
 NS_ASSUME_NONNULL_END
