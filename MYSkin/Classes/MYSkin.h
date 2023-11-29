@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MYSkinDecodeEngineProtocol.h"
-
+#import "MYSkinManager.h"
 
 FOUNDATION_EXPORT NSString * _Nonnull const kMYSkinColorThemeChange;
 
